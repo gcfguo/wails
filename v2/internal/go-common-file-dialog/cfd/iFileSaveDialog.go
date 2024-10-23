@@ -4,8 +4,10 @@
 package cfd
 
 import (
-	"github.com/gcfguo/wails/v2/internal/go-common-file-dialog/util"
 	"unsafe"
+
+	"github.com/gcfguo/wails/v2/internal/go-common-file-dialog/util"
+	"github.com/go-ole/go-ole"
 )
 
 var (

@@ -18,6 +18,7 @@ require (
 	github.com/labstack/gommon v0.4.0
 	github.com/leaanthony/clir v1.3.0
 	github.com/leaanthony/debme v1.2.1
+	github.com/leaanthony/go-ansi-parser v1.6.1
 	github.com/leaanthony/gosod v1.0.3
 	github.com/leaanthony/slicer v1.6.0
 	github.com/leaanthony/winicon v1.0.0

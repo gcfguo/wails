@@ -8,6 +8,7 @@ import (
 	"sync"
 
 	"github.com/gcfguo/wails/v2/pkg/menu"
+	"github.com/leaanthony/go-ansi-parser"
 	"github.com/pkg/errors"
 )
 
