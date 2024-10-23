@@ -23,6 +23,7 @@ import (
 	"github.com/gcfguo/wails/v2/internal/menumanager"
 	"github.com/gcfguo/wails/v2/pkg/assetserver"
 	"github.com/gcfguo/wails/v2/pkg/options"
+	"github.com/labstack/echo"
 	"golang.org/x/net/websocket"
 )
 
