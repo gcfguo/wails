@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/gcfguo/wails/v2/cmd/wails/internal/gomod"
 	"io"
 	"log"
 	"net/http"
@@ -21,7 +22,6 @@ import (
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/gcfguo/wails/v2/cmd/wails/flags"
-	"github.com/gcfguo/wails/v2/cmd/wails/internal/gomod"
 	"github.com/gcfguo/wails/v2/cmd/wails/internal/logutils"
 	"github.com/gcfguo/wails/v2/internal/fs"
 	"github.com/gcfguo/wails/v2/internal/process"
@@ -51,7 +51,7 @@ func Application(f *flags.Dev, logger *clilogger.CLILogger) error {
 
 	cwd := lo.Must(os.Getwd())
 
-	// Update go.mod to use current wails version
+	//Update go.mod to use current wails version
 	err := gomod.SyncGoMod(logger, !f.NoSyncGoMod)
 	if err != nil {
 		return err
