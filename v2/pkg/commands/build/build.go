@@ -82,6 +82,7 @@ func Build(options *Options) (string, error) {
 	if err != nil {
 		return "", err
 	}
+	_ = cwd
 
 	// wails js dir
 	options.WailsJSDir = options.ProjectData.GetWailsJSDir()

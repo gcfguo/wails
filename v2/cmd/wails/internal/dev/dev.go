@@ -88,9 +88,11 @@ func Application(f *flags.Dev, logger *clilogger.CLILogger) error {
 			return err
 		}
 		buildOptions.IgnoreApplication = false
+
 	}
 
 	legacyUseDevServerInsteadofCustomScheme := false
+
 	// frontend:dev:watcher command.
 	frontendDevAutoDiscovery := projectConfig.IsFrontendDevServerURLAutoDiscovery()
 	if command := projectConfig.DevWatcherCommand; command != "" {
