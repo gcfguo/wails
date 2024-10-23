@@ -4,6 +4,7 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
+	"github.com/go-git/go-git/v5"
 	gofs "io/fs"
 	"log"
 	"os"
