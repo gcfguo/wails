@@ -68,7 +68,7 @@ func (d *DevWebServer) Run(ctx context.Context) error {
 	_fronendDevServerURL, _ := ctx.Value("frontenddevserverurl").(string)
 
 	//My Changes
-	_fronendDevServerURL = "http://0.0.0.0:5173/"
+	//_fronendDevServerURL = "http://0.0.0.0:5173/"
 	//
 
 	if _fronendDevServerURL == "" {
@@ -116,7 +116,7 @@ func (d *DevWebServer) Run(ctx context.Context) error {
 	})
 
 	//My Changes
-	d.devServerAddr = "0.0.0.0:9100"
+	//d.devServerAddr = "0.0.0.0:9100"
 	//
 
 	if devServerAddr := d.devServerAddr; devServerAddr != "" {

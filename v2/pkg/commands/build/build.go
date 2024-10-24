@@ -122,9 +122,9 @@ func Build(options *Options) (string, error) {
 	}
 
 	// Create embed directories if they don't exist
-	if err := CreateEmbedDirectories(cwd, options); err != nil {
-		return "", err
-	}
+	//if err := CreateEmbedDirectories(cwd, options); err != nil {
+	//	return "", err
+	//}
 
 	// Generate bindings
 	if !options.SkipBindings {

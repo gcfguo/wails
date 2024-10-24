@@ -91,6 +91,13 @@ type App struct {
 
 	// Debug options for debug builds. These options will be ignored in a production build.
 	Debug Debug
+
+	//DevServer (MyChanges)
+	DevServer string
+	//FrontendDevServerURL (MyChanges)
+	FrontendDevServerURL string
+	//AssetDir (MyChanges)
+	AssetDir string
 }
 
 type ErrorFormatter func(error) any

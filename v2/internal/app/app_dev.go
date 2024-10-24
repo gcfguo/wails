@@ -58,11 +58,6 @@ func CreateApp(appoptions *options.App) (*App, error) {
 	var loglevelFlag *string
 
 	assetdir := os.Getenv("assetdir")
-
-	//My Changes
-	//assetdir = "frontend/dist"
-	//
-
 	if assetdir == "" {
 		assetdirFlag = devFlags.String("assetdir", "", "Directory to serve assets")
 	}
@@ -117,10 +112,7 @@ func CreateApp(appoptions *options.App) (*App, error) {
 			return nil, fmt.Errorf("unable to determine port of DevServer: %s", err)
 		}
 
-		fmt.Println("-=======================frontendDevServerURL: ", devServer)
-
 		ctx = context.WithValue(ctx, "assetserverport", port)
-
 		ctx = context.WithValue(ctx, "frontenddevserverurl", frontendDevServerURL)
 
 		externalURL, err := url.Parse(frontendDevServerURL)
@@ -136,8 +128,6 @@ func CreateApp(appoptions *options.App) (*App, error) {
 		if !checkPortIsOpen(externalURL.Host, time.Minute, waitCb) {
 			myLogger.Error("Timeout waiting for frontend DevServer")
 		}
-
-		fmt.Println("========================frontendDevServerURL2: ", externalURL)
 
 		handler := assetserver.NewExternalAssetsHandler(myLogger, assetConfig, externalURL)
 		assetConfig.Assets = nil

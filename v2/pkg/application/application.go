@@ -2,11 +2,14 @@ package application
 
 import (
 	"context"
+	"fmt"
+	"os"
+	"sync"
+
 	"github.com/gcfguo/wails/v2/internal/app"
 	"github.com/gcfguo/wails/v2/internal/signal"
 	"github.com/gcfguo/wails/v2/pkg/menu"
 	"github.com/gcfguo/wails/v2/pkg/options"
-	"sync"
 )
 
 // Application is the main Wails application
@@ -24,6 +27,18 @@ type Application struct {
 func NewWithOptions(options *options.App) *Application {
 	if options == nil {
 		return New()
+	}
+	err := os.Setenv("devserver", options.DevServer)
+	if err != nil {
+		fmt.Println("Error setting environment variable devserver")
+	}
+	err = os.Setenv("frontenddevserverurl", options.FrontendDevServerURL)
+	if err != nil {
+		fmt.Println("Error setting environment variable frontenddevserverurl")
+	}
+	err = os.Setenv("assetdir", options.AssetDir)
+	if err != nil {
+		fmt.Println("Error setting environment variable assetdir")
 	}
 	return &Application{
 		options: options,

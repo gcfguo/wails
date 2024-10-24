@@ -299,7 +299,6 @@ func restartApp(buildOptions *build.Options, debugBinaryProcess *process.Process
 		buildOptions.Logger.Fatal("Unable to parse appargs: %s", err.Error())
 	}
 
-	fmt.Println("-========================-:dev.Setenv", f.AssetDir, f.DevServer)
 	// Set environment variables accordingly
 	os.Setenv("loglevel", f.LogLevel)
 	os.Setenv("assetdir", f.AssetDir)
