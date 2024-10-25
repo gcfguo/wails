@@ -32,14 +32,6 @@ func NewWithOptions(options *options.App) *Application {
 	if err != nil {
 		fmt.Println("Error setting environment variable devserver")
 	}
-	err = os.Setenv("frontenddevserverurl", options.FrontendDevServerURL)
-	if err != nil {
-		fmt.Println("Error setting environment variable frontenddevserverurl")
-	}
-	err = os.Setenv("assetdir", options.AssetDir)
-	if err != nil {
-		fmt.Println("Error setting environment variable assetdir")
-	}
 	return &Application{
 		options: options,
 	}

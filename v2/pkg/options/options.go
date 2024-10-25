@@ -94,10 +94,6 @@ type App struct {
 
 	//DevServer (MyChanges)
 	DevServer string
-	//FrontendDevServerURL (MyChanges)
-	FrontendDevServerURL string
-	//AssetDir (MyChanges)
-	AssetDir string
 }
 
 type ErrorFormatter func(error) any
